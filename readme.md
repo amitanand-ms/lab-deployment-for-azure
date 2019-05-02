@@ -2,10 +2,14 @@ Script is created by Amit Anand
 
 
 Introduction
+
+
 This Program is created to help engineers and admins to quickly spin to different deployments for lab and testing purpose. To help everyone with visualizing resources and what are the different components needs to be set to make things working in such Scenarios.
 This is to expedite lab repro and scenario testing. 
 
 How it works
+
+
 This will create a new resource group; name of resource group is combination of number of the scenario you choose along with a random number.  To maintain multiple deployment of same scenarios. 
 And all the resources required based on scenarios would be created in same resource groups.
 From 0.02 version onwards users would have flexibility to use silent mode which make program to use predefined set of network prefixes. Thus, would need even fewer inputs form user and there would be no need to calculate correct subnets for scenario creation as well. 
