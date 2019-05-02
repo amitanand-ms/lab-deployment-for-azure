@@ -101,24 +101,32 @@ i.e. if the VM OS is selected port 22,80,443 would be open. In case of Windows 3
 
 Scenarios Corevered Presently.
  1.) Create ILB basic with single VM backend
+ 
  Creates an internal Basic LB with a single VM behind it in backend pool. Since this is ILB VM would have PIP for connectivity. 
  
  2.) Create Ext. LB basic with single VM backend
+ 
  Creates External basic LB with single VM in backend, connectivity to VM would be through LB based on OS you choose i.e. Linux or windows. 
  
  3.) Standard ILB with single VM backend
+ 
  Creates an internal Standard LB with a single VM behind it in backend pool. Since this is ILB VM would have PIP for connectivity.
   
  4.) Stabdard Ext. LB with single VM in backend
+ 
  Creates External standard LB with single VM in backend, connectivity to VM would be through LB based on OS you choose i.e. Linux or windows.
  
  5.) Standard Ext. LB with multiple VM in backend
+ 
  Creates External standard LB with multiple VM in backend, connectivity to VM would be through LB based on OS you choose i.e. Linux or windows. User woudl need to enter number of VMs in backend pool and this will also create NAT rules to connect to VM based on choice of OS. 
  
  6.) Peered Vnets and single windows VM with PIP in each Vnet
+ 
  Creates two peered Vnets and windows VM in each vnet with PIP on them. 
  
  7.) Hub spoke model along with IPSEC connected Vnet with hub
+ 
  Creates 3 Vnets hub, spoke and IPSEC. Ipsec Vnets would be connected through IPsec connection to hub vnet through VPN gateways. And Spoke would be peered as use remote gateways to hub. 
+ 
  It will create VM with PIP in IPSEC Vnet and with just Local IP in Spoke Vnet. And these VMs would be able to connect to each other though hub spoke model using ipsec connection. Just like with an onprem network using hub spoke model. 
  
