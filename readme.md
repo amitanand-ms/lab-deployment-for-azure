@@ -7,7 +7,7 @@ Introduction
 This Program is created to help engineers and admins to quickly spin to different deployments for lab and testing purpose. To help everyone with visualizing resources and what are the different components needs to be set to make things working in such Scenarios.
 This is to expedite lab repro and scenario testing. 
 
-How it works
+What it do
 
 
 This will create a new resource group; name of resource group is combination of number of the scenario you choose along with a random number.  To maintain multiple deployment of same scenarios. 
@@ -82,7 +82,7 @@ Like
 
 Chmod +x labdepazure_0.02.sh
 
-5.) Sign in to your Azure azzount from az cli
+5.) Sign in to your Azure account from az cli
 
    az login
 
@@ -106,7 +106,7 @@ Script will take care of opening related ports for accessing resources based on 
 
 i.e. if the VM OS is selected port 22,80,443 would be open. In case of Windows 3389, 80,443 would be open. 
 
-Scenarios Corevered Presently.
+Scenarios Covered Presently.
  1.) Create ILB basic with single VM backend
  
  Creates an internal Basic LB with a single VM behind it in backend pool. Since this is ILB VM would have PIP for connectivity. 
@@ -119,13 +119,13 @@ Scenarios Corevered Presently.
  
  Creates an internal Standard LB with a single VM behind it in backend pool. Since this is ILB VM would have PIP for connectivity.
   
- 4.) Stabdard Ext. LB with single VM in backend
+ 4.) Standard Ext. LB with single VM in backend
  
  Creates External standard LB with single VM in backend, connectivity to VM would be through LB based on OS you choose i.e. Linux or windows.
  
  5.) Standard Ext. LB with multiple VM in backend
  
- Creates External standard LB with multiple VM in backend, connectivity to VM would be through LB based on OS you choose i.e. Linux or windows. User woudl need to enter number of VMs in backend pool and this will also create NAT rules to connect to VM based on choice of OS. 
+ Creates External standard LB with multiple VM in backend, connectivity to VM would be through LB based on OS you choose i.e. Linux or windows. User would need to enter number of VMs in backend pool and this will also create NAT rules to connect to VM based on choice of OS. 
  
  6.) Peered Vnets and single windows VM with PIP in each Vnet
  
