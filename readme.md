@@ -20,14 +20,21 @@ Steps to use.
 On Linux PCs. 
 
 One time step if you do not have AZ CLI already on your PC. 
+
 1.)	Install AZ CLI on your Linux OS
+
 Depending on your OS type
+
 https://docs.microsoft.com/en-us/cli/azure/install-azure-cli?view=azure-cli-latest
 
 Steps to run script
-       1.)  SSH to your Linux PC.
+
+1.)  SSH to your Linux PC.
+
 2.)	Copy script to a folder and unzip it using unzip command.
+
 Wget  https://github.com/amitanand-ms/lab-deployment-for-azure/archive/master.zip
+
 Unzip master.zip 
 3.)	Change directory to program directory
 
