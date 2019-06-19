@@ -1,0 +1,54 @@
+V0.03----------------------------------------------------------------------------------
+
+New additions: - 
+
+Scenarios for application gateway added in his version. Which covers app gateway V1 and V2. 
+All these scenarios will create application gateway and configure backend VM as per the scenario specification. Backend VM will have a PIP as well to ssh in to and take traces if required. 
+In addition, backend VM will also get NGINX installed and configured on HTTP or HTTPS based one the scenario. 
+
+While deploying the scenario script will ask if you want to use app gateway V1 or V2, press 1 or 2 based on your requirement and then press enter. 
+
+By default, application gateways would be created with basic rules, in case of path-based rules requirement for testing. User would need to create those manually. 
+
+Silent mode in also available for these scenarios, where you would not need to enter details for IPs etc. to create networks. 
+
+
+•	Application gateway with HTTP listener and HTTP backend - Basic Rule
+
+This scenario will create app gateway with HTTP listener and backend VM with NGINX listening on HTTP. 
+
+
+
+•	Application gateway with HTTPS listener and HTTP backend - Basic Rule
+
+This scenario will create app gateway with HTTPS listener and backend VM with NGINX listening on HTTP. I.E. SSL offload scenario
+
+ 
+•	Application gateway with HTTPS listener with end to end SSL- Basic Rule
+
+This scenario will create app gateway with HTTPS listener and backend VM with NGINX listening on HTTPS. I.E. end to end SSL.
+
+
+
+•	Application gateway WAF with HTTPS listener and HTTP backend - Basic Rule
+
+This will create SSL off load scenario but will use application gateway with WAF. By default, WAF would be kept disabled, you could enable with preventive or blocking based on your requirement. 
+
+
+
+•	Application gateway WAF with HTTPS listener and end to end ssl - Basic Rule
+
+This will create end to end SSL, scenario but will use application gateway with WAF. By default, WAF would be kept disabled, you could enable with preventive or blocking based on your requirement. 
+
+Imp: -  
+
+You need to have openssl installed, script will give one try to install if it detects openssl not installed on system and if that fails script will exit. 
+
+With V2 and end to end SSL scenario additional inputs required while creating certificates. And user would need to assign root cert to https settings from portal. 
+
+Script will create root cert and upload to application gateway but its assignment to http settings needs to do manually from portal.  
+
+
+Fixes: - 
+
+Enhancement done to create similar resources in parallel while sending requests to save time for deployment.
