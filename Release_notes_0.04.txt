@@ -1,0 +1,8 @@
+V0.04----------------------------------------------------------------------------------
+
+
+
+New additions: - 
+Added Scenario for deploying AKS cluster with sample application running in the Pods.
+This will deploy ACS (Azure Containers) along with AKS and will push the default Azure front application to pods. At the end you would have your Kubernettes cluster running with sample application in pods. 
+This nees Git and Dockers binaries installed on the system. Script will try to install it if fails will exit. 
